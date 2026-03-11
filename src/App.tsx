@@ -1,30 +1,35 @@
-import { motion } from 'motion/react'
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import TopBar from './components/TopBar'
+import Home from './pages/Home'
+import About from './pages/About'
+import Mission from './pages/Mission'
+import Contact from './pages/Contact'
+import { Suspense, lazy } from 'react'
+
+const Products = lazy(() => import('./pages/Products'))
+const Legal = lazy(() => import('./pages/Legal'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+const Terms = lazy(() => import('./pages/Terms'))
 
 function App() {
   return (
-    <div className="comingsoon-bg">
-      <motion.div
-        className="comingsoon-container"
-        initial={{ opacity: 0, scale: 0.85 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <motion.h1
-          className="comingsoon-title"
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.7, type: 'spring', stiffness: 80 }}
-        >
-          <span className="comingsoon-pop">Coming Soon</span>
-        </motion.h1>
-      </motion.div>
-      <div className="comingsoon-bubbles">
-        {Array.from({ length: 12 }).map((_, i) => (
-          <div key={i} className={`bubble bubble-${i + 1}`}></div>
-        ))}
-      </div>
-    </div>
+    <BrowserRouter>
+      <TopBar />
+      <Suspense fallback={<div style={{ padding: 24 }}>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 
