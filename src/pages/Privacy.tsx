@@ -9,6 +9,11 @@ export default function Privacy() {
       </p>
       <h2>Data Collection</h2>
       <p>We do not track users beyond standard web analytics for site health.</p>
+      <br></br>
+      <h1>Terms and Conditions</h1>
+      <p> By using this site you agree to the terms and conditions. The site is a
+        curated directory maintained by volunteers; we strive for accuracy but
+        cannot guarantee completeness.</p>
     </div>
   )
 }

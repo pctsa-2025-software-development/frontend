@@ -42,11 +42,6 @@ export default function TopBar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/terms" className={({ isActive }) => (isActive ? 'active' : '')}>
-                Terms
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
                 Contact
               </NavLink>
