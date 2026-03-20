@@ -1,4 +1,2 @@
-\# Readme
-
-\_Placeholder\_
-
+# README
+This is the repository for our NCTSA entry
