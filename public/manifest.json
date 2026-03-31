@@ -1,0 +1,16 @@
+{
+  "short_name": "AccessBridge",
+  "name": "AccessBridge — Disability resources",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0c4a6e",
+  "background_color": "#020617"
+}
