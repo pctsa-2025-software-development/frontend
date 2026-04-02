@@ -27,19 +27,19 @@ const footerCols = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950/80 backdrop-blur-xl">
+    <footer className="relative z-10 mt-8 border-t border-stone-200 bg-[#f4eee5]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
-            <p className="text-lg font-bold text-white">AccessBridge</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-400">
-              A proof-of-concept platform connecting people with trusted disability
-              resources and a companion browser extension.
+            <p className="font-display text-lg font-bold text-slate-900">AccessBridge</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              A student-built project sharing clear disability resources and practical
+              accessibility support for everyday use.
             </p>
           </div>
           {footerCols.map((col) => (
             <div key={col.title}>
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
                 {col.title}
               </p>
               <ul className="mt-4 space-y-2">
@@ -47,7 +47,7 @@ export function SiteFooter() {
                   <li key={l.to}>
                     <Link
                       to={l.to}
-                      className="text-sm text-slate-300 transition hover:text-white"
+                      className="text-sm text-slate-600 transition hover:text-slate-900"
                     >
                       {l.label}
                     </Link>
@@ -57,9 +57,9 @@ export function SiteFooter() {
             </div>
           ))}
         </div>
-        <p className="mt-12 border-t border-white/10 pt-8 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} AccessBridge — TSA Software Development POC. Content
-          may be updated by the research team.
+        <p className="mt-12 border-t border-slate-200 pt-8 text-center text-xs text-slate-500">
+          © {new Date().getFullYear()} AccessBridge. Built with care by students for TSA Software
+          Development.
         </p>
       </div>
     </footer>

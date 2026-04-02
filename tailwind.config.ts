@@ -6,45 +6,43 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#0ea5e9",
-          600: "#0284c7",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c4a6e",
+          50: "#ecfeff",
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
         },
         accent: {
-          violet: "#8b5cf6",
-          fuchsia: "#d946ef",
+          violet: "#9b87f5",
+          fuchsia: "#fb7185",
           amber: "#f59e0b",
         },
       },
       fontFamily: {
         sans: [
-          "Inter Variable",
-          "Inter",
+          "Newsreader",
           "system-ui",
           "-apple-system",
           "Segoe UI",
-          "Roboto",
           "sans-serif",
         ],
-        display: ["Inter Variable", "Inter", "system-ui", "sans-serif"],
+        display: ["Syne", "Newsreader", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "mesh-1":
-          "radial-gradient(at 40% 20%, rgba(14,165,233,0.35) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(139,92,246,0.25) 0px, transparent 45%), radial-gradient(at 0% 50%, rgba(217,70,239,0.2) 0px, transparent 50%)",
+          "radial-gradient(at 40% 20%, rgba(34,211,238,0.34) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(155,135,245,0.22) 0px, transparent 45%), radial-gradient(at 0% 50%, rgba(251,113,133,0.2) 0px, transparent 50%)",
         "mesh-2":
-          "radial-gradient(ellipse at top, rgba(14,165,233,0.15), transparent 60%)",
+          "radial-gradient(ellipse at top, rgba(34,211,238,0.2), transparent 60%)",
       },
       boxShadow: {
-        glass: "0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
+        glass: "0 8px 32px rgba(4, 8, 24, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
         "glass-lg":
-          "0 25px 50px -12px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12)",
+          "0 25px 50px -12px rgba(4, 8, 24, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.14)",
       },
       backdropBlur: {
         xs: "2px",
