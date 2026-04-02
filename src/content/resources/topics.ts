@@ -7,6 +7,8 @@ export const resourceTopics: ResourceTopic[] = [
     title: "Mobility support",
     summary:
       "Practical context for mobility-related barriers in daily digital and physical environments, with a focus on respectful language and accommodations.",
+    category: "Mobility",
+    tags: ["educators", "employers", "family"],
     audience:
       "Educators, employers, and family members supporting people with mobility disabilities.",
     lastReviewed: "2026-03-15",
@@ -36,6 +38,8 @@ export const resourceTopics: ResourceTopic[] = [
     title: "Vision accessibility",
     summary:
       "How digital content and environments can work better for people who are blind, have low vision, or use screen magnification.",
+    category: "Vision",
+    tags: ["designers", "developers", "content"],
     audience: "Designers, developers, and content owners building public-facing sites.",
     lastReviewed: "2026-03-15",
     keyFacts: [
@@ -61,6 +65,8 @@ export const resourceTopics: ResourceTopic[] = [
     title: "Hearing accessibility",
     summary:
       "Communication access in meetings, media, and classrooms for people who are Deaf, hard of hearing, or prefer captions.",
+    category: "Hearing",
+    tags: ["events", "educators", "media"],
     audience: "Event organizers, teachers, and video producers.",
     lastReviewed: "2026-03-15",
     keyFacts: [
@@ -84,6 +90,8 @@ export const resourceTopics: ResourceTopic[] = [
     title: "Neurodiversity support",
     summary:
       "Inclusive practices for autistic people, people with ADHD, and others—without reducing individuals to stereotypes.",
+    category: "Neurodiversity",
+    tags: ["managers", "educators", "teams"],
     audience: "Managers, educators, and peer teams.",
     lastReviewed: "2026-03-15",
     keyFacts: [
@@ -107,6 +115,8 @@ export const resourceTopics: ResourceTopic[] = [
     title: "Caregiver guides",
     summary:
       "High-level guidance for family members and supporters coordinating care, school, and community access.",
+    category: "Caregiver",
+    tags: ["family", "students"],
     audience: "Family caregivers and student advocates.",
     lastReviewed: "2026-03-15",
     keyFacts: [
@@ -130,6 +140,8 @@ export const resourceTopics: ResourceTopic[] = [
     title: "Workplace accommodations",
     summary:
       "Foundations for requesting and implementing reasonable accommodations in hiring and employment contexts.",
+    category: "Workplace",
+    tags: ["employees", "hr", "managers"],
     audience: "Employees, HR partners, and team leads.",
     lastReviewed: "2026-03-15",
     keyFacts: [

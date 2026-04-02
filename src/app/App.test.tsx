@@ -10,6 +10,8 @@ describe("App", () => {
         <App />
       </MemoryRouter>,
     );
-    expect(getByRole("heading", { level: 1 })).toHaveTextContent(/Clarity, access/i);
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent(
+      /Making disability resources clearer/i,
+    );
   });
 });

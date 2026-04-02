@@ -8,20 +8,20 @@ export function TermsPage() {
         align="left"
         eyebrow="Legal"
         title="Terms of use"
-        description="High-level terms suitable for a student POC. Have an advisor review before claiming real-world enforcement."
+        description="Simple terms for this student project. Have an advisor review before using this language in production."
       />
-      <Card className="mt-10 space-y-4 text-sm leading-relaxed text-slate-300">
+      <Card className="mt-10 space-y-4 text-sm leading-relaxed text-slate-600">
         <p>
           By using AccessBridge materials, you agree to use them responsibly and to verify
           critical information with qualified professionals when making health, legal, or
           accessibility decisions.
         </p>
-        <h2 className="text-base font-semibold text-white">No professional advice</h2>
+        <h2 className="text-base font-semibold text-slate-900">No professional advice</h2>
         <p>
           Content is educational and may be updated. It is not medical, legal, or individualized
           professional advice.
         </p>
-        <h2 className="text-base font-semibold text-white">Intellectual property</h2>
+        <h2 className="text-base font-semibold text-slate-900">Intellectual property</h2>
         <p>
           Student-created assets remain subject to your school and competition rules. Respect
           third-party licenses for fonts, icons, and libraries.

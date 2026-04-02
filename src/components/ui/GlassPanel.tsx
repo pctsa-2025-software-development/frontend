@@ -9,7 +9,7 @@ export function GlassPanel({
   return (
     <div
       className={cn(
-        "rounded-2xl border border-white/15 bg-white/10 shadow-glass backdrop-blur-xl",
+        "surface-glass rounded-2xl",
         className,
       )}
       {...props}
