@@ -6,6 +6,7 @@ type Props = {
   title: string;
   description?: string;
   align?: "left" | "center";
+  as?: "h1" | "h2" | "h3";
   children?: ReactNode;
 };
 
@@ -14,6 +15,7 @@ export function SectionHeader({
   title,
   description,
   align = "center",
+  as: Heading = "h2",
   children,
 }: Props) {
   return (
@@ -28,9 +30,9 @@ export function SectionHeader({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      <Heading className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
         {title}
-      </h2>
+      </Heading>
       {description ? (
         <p className="mt-4 text-lg text-slate-400">{description}</p>
       ) : null}

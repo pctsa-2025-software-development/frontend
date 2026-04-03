@@ -26,10 +26,11 @@ export function DownloadExtensionPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <SectionHeader
+        as="h1"
         align="left"
         eyebrow="Download"
         title="AccessBridge Companion"
-          description="A simple browser companion designed to keep accessibility guidance within reach."
+        description="A simple browser companion designed to keep accessibility guidance within reach."
       />
 
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -37,15 +38,15 @@ export function DownloadExtensionPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
             Release
           </p>
-          <p className="mt-2 text-3xl font-bold text-slate-900">{r.name}</p>
-          <p className="mt-2 text-slate-600">
-            Version <span className="font-mono text-slate-700">{r.version}</span> ·{" "}
+          <p className="mt-2 text-3xl font-bold text-white">{r.name}</p>
+          <p className="mt-2 text-slate-400">
+            Version <span className="font-mono text-slate-300">{r.version}</span> ·{" "}
             {r.releaseDate}
           </p>
           <ul className="mt-8 space-y-3">
             {r.featureBullets.map((b) => (
-              <li key={b} className="flex gap-3 text-slate-700">
-                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-slate-500" aria-hidden />
+              <li key={b} className="flex gap-3 text-slate-300">
+                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-400" aria-hidden />
                 {b}
               </li>
             ))}
@@ -71,9 +72,9 @@ export function DownloadExtensionPage() {
           </div>
 
           {!hasRemote ? (
-            <p className="mt-6 text-sm text-amber-800">
+            <p className="mt-6 text-sm text-amber-400">
               Add a GitHub Release asset URL or store listing in{" "}
-              <code className="rounded bg-slate-200 px-1.5 py-0.5 font-mono text-xs text-slate-700">
+              <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-xs text-slate-300">
                 src/content/extension/extension.ts
               </code>
               .
@@ -86,14 +87,14 @@ export function DownloadExtensionPage() {
             <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
               Offline demo
             </h2>
-            <p className="mt-3 text-sm text-slate-600">
+            <p className="mt-3 text-sm text-slate-400">
               For events without Wi-Fi, install from a local archive or demo the website with{" "}
-              <code className="rounded bg-slate-200 px-1 font-mono text-xs text-slate-700">npm run preview</code>{" "}
+              <code className="rounded bg-white/10 px-1 font-mono text-xs text-slate-300">npm run preview</code>{" "}
               after a production build.
             </p>
             {r.offlineArchivePath ? (
               <a
-                className="mt-4 inline-block text-sm font-semibold text-slate-700 hover:text-slate-900"
+                className="mt-4 inline-block text-sm font-semibold text-slate-300 hover:text-white"
                 href={r.offlineArchivePath}
                 download
               >
@@ -107,13 +108,13 @@ export function DownloadExtensionPage() {
             )}
           </Card>
           <Card>
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
               Release notes
             </h2>
             {r.releaseNotesUrl ? (
               <a
                 href={r.releaseNotesUrl}
-                className="mt-3 inline-block text-sm font-semibold text-slate-700 hover:text-slate-900"
+                className="mt-3 inline-block text-sm font-semibold text-slate-300 hover:text-white"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -128,16 +129,16 @@ export function DownloadExtensionPage() {
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <h2 className="text-lg font-semibold text-slate-900">Install steps</h2>
-          <ol className="mt-4 list-inside list-decimal space-y-2 text-slate-600">
+          <h2 className="text-lg font-semibold text-white">Install steps</h2>
+          <ol className="mt-4 list-inside list-decimal space-y-2 text-slate-400">
             {installSteps.map((step) => (
               <li key={step}>{step}</li>
             ))}
           </ol>
         </Card>
         <Card>
-          <h2 className="text-lg font-semibold text-slate-900">Requirements</h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-slate-600">
+          <h2 className="text-lg font-semibold text-white">Requirements</h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-slate-400">
             {requirements.map((req) => (
               <li key={req}>{req}</li>
             ))}
@@ -147,15 +148,15 @@ export function DownloadExtensionPage() {
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <h2 className="text-lg font-semibold text-slate-900">Screenshots</h2>
-          <p className="mt-3 text-sm text-slate-600">
+          <h2 className="text-lg font-semibold text-white">Screenshots</h2>
+          <p className="mt-3 text-sm text-slate-400">
             Replace these placeholders with real extension screens when they are ready.
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {["Toolbar overview", "Accessibility panel"].map((label) => (
               <div
                 key={label}
-                className="flex h-40 items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50 text-xs text-slate-600"
+                className="flex h-40 items-center justify-center rounded-xl border border-dashed border-white/15 bg-white/5 text-xs text-slate-400"
               >
                 {label} screenshot
               </div>
@@ -163,11 +164,11 @@ export function DownloadExtensionPage() {
           </div>
         </Card>
         <Card>
-          <h2 className="text-lg font-semibold text-slate-900">Roadmap</h2>
-          <ul className="mt-4 space-y-3 text-sm text-slate-600">
+          <h2 className="text-lg font-semibold text-white">Roadmap</h2>
+          <ul className="mt-4 space-y-3 text-sm text-slate-400">
             {roadmap.map((item) => (
               <li key={item.title}>
-                <p className="font-semibold text-slate-900">{item.title}</p>
+                <p className="font-semibold text-white">{item.title}</p>
                 <p className="text-slate-500">{item.detail}</p>
               </li>
             ))}

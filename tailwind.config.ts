@@ -5,6 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        surface: {
+          base: "#0c0f1a",
+          layer: "#111527",
+          deep: "#080b14",
+        },
         brand: {
           50: "#ecfeff",
           100: "#cffafe",
@@ -36,8 +41,6 @@ export default {
       backgroundImage: {
         "mesh-1":
           "radial-gradient(at 40% 20%, rgba(34,211,238,0.34) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(155,135,245,0.22) 0px, transparent 45%), radial-gradient(at 0% 50%, rgba(251,113,133,0.2) 0px, transparent 50%)",
-        "mesh-2":
-          "radial-gradient(ellipse at top, rgba(34,211,238,0.2), transparent 60%)",
       },
       boxShadow: {
         glass: "0 8px 32px rgba(4, 8, 24, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)",

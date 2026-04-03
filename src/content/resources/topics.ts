@@ -30,6 +30,11 @@ export const resourceTopics: ResourceTopic[] = [
         label: "ADA National Network — overview",
         note: "Replace with your vetted source when content is finalized.",
       },
+      {
+        label: "r/disability",
+        url: "https://www.reddit.com/r/disability/",
+        note: "Online peer support and discussion community for individuals with disabilities.",
+      },
     ],
     relatedSlugs: ["workplace-accommodations", "caregiver-guides"],
   },
@@ -57,6 +62,16 @@ export const resourceTopics: ResourceTopic[] = [
     ],
     references: [
       { label: "WCAG — quick reference", note: "Use official W3C materials for judging citations." },
+      {
+        label: "r/Blind",
+        url: "https://www.reddit.com/r/Blind/",
+        note: "Community for blind or visually impaired individuals to share advice and resources.",
+      },
+      {
+        label: "National Federation of the Blind",
+        url: "https://www.nfb.org",
+        note: "Advocacy and support organization providing resources, education, and employment assistance for blind individuals.",
+      },
     ],
     relatedSlugs: ["neurodiversity-support", "mobility-support"],
   },
@@ -82,7 +97,19 @@ export const resourceTopics: ResourceTopic[] = [
       "Provide agendas and materials ahead of time.",
       "Use live captions for meetings; reserve ASL interpreters when requested.",
     ],
-    references: [{ label: "Placeholder — institutional captioning guidelines" }],
+    references: [
+      { label: "Placeholder — institutional captioning guidelines" },
+      {
+        label: "r/deaf",
+        url: "https://www.reddit.com/r/deaf/",
+        note: "Community for deaf and hard-of-hearing individuals to discuss Deaf culture, communication, and accessibility.",
+      },
+      {
+        label: "National Association of the Deaf",
+        url: "https://www.nad.org",
+        note: "Civil rights organization focused on advocacy, accessibility, and support for deaf and hard-of-hearing individuals.",
+      },
+    ],
     relatedSlugs: ["workplace-accommodations", "vision-accessibility"],
   },
   {
@@ -107,7 +134,14 @@ export const resourceTopics: ResourceTopic[] = [
       "Offer agenda and materials before meetings.",
       "Allow camera-off options and breaks in long sessions when feasible.",
     ],
-    references: [{ label: "Placeholder — respectful language guide" }],
+    references: [
+      { label: "Placeholder — respectful language guide" },
+      {
+        label: "Knowbility",
+        url: "https://www.knowbility.org",
+        note: "Promotes accessible technology and digital inclusion for people with disabilities.",
+      },
+    ],
     relatedSlugs: ["workplace-accommodations", "caregiver-guides"],
   },
   {
@@ -132,7 +166,14 @@ export const resourceTopics: ResourceTopic[] = [
       "Keep a one-page profile of strengths, needs, and accommodations to share with new partners.",
       "Request written summaries after IEP/504 or care meetings.",
     ],
-    references: [{ label: "Placeholder — local advocacy org" }],
+    references: [
+      { label: "Placeholder — local advocacy org" },
+      {
+        label: "The Arc",
+        url: "https://thearc.org",
+        note: "National organization advocating for people with intellectual and developmental disabilities.",
+      },
+    ],
     relatedSlugs: ["mobility-support", "neurodiversity-support"],
   },
   {
@@ -157,7 +198,24 @@ export const resourceTopics: ResourceTopic[] = [
       "Document requests in writing and keep copies of approvals.",
       "Pilot changes with a check-in date to refine what works.",
     ],
-    references: [{ label: "EEOC — disability discrimination", note: "Official government sources for citations." }],
+    references: [
+      { label: "EEOC — disability discrimination", note: "Official government sources for citations." },
+      {
+        label: "Best Buddies International",
+        url: "https://www.bestbuddies.org",
+        note: "Creates opportunities for friendship, employment, and leadership development for people with IDD.",
+      },
+      {
+        label: "Community Options",
+        url: "https://www.comop.org",
+        note: "Provides housing, employment support, and community-based services for people with IDD.",
+      },
+      {
+        label: "National Telecommuting Institute",
+        url: "https://www.nticentral.org",
+        note: "Helps people with disabilities find remote and work-from-home job opportunities.",
+      },
+    ],
     relatedSlugs: ["vision-accessibility", "hearing-accessibility"],
   },
 ];

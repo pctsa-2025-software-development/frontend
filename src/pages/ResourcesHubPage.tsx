@@ -5,19 +5,21 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Tag } from "@/components/ui/Tag";
 import { resourceTopics } from "@/content/resources/topics";
 
+const ALL = "All" as const;
+
 export function ResourcesHubPage() {
   const [q, setQ] = useState("");
-  const [category, setCategory] = useState("All");
-  const [tag, setTag] = useState("All");
+  const [category, setCategory] = useState<string>(ALL);
+  const [tag, setTag] = useState<string>(ALL);
 
   const categories = useMemo(() => {
     const set = new Set(resourceTopics.map((t) => t.category));
-    return ["All", ...Array.from(set).sort()];
+    return [ALL, ...Array.from(set).sort()];
   }, []);
 
   const tags = useMemo(() => {
     const set = new Set(resourceTopics.flatMap((t) => t.tags));
-    return ["All", ...Array.from(set).sort()];
+    return [ALL, ...Array.from(set).sort()];
   }, []);
 
   const filtered = useMemo(() => {
@@ -36,10 +38,11 @@ export function ResourcesHubPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <SectionHeader
+        as="h1"
         align="left"
         eyebrow="Resources"
-          title="Browse guides by topic, at your own pace."
-          description="Use search and filters to find what you need. Each guide includes facts, common myths, and practical tips."
+        title="Browse guides by topic, at your own pace."
+        description="Use search and filters to find what you need. Each guide includes facts, common myths, and practical tips."
       />
 
       <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -72,12 +75,12 @@ export function ResourcesHubPage() {
               {c}
             </button>
           ))}
-          {(category !== "All" || tag !== "All" || q.trim()) && (
+          {(category !== ALL || tag !== ALL || q.trim()) && (
             <button
               type="button"
               onClick={() => {
-                setCategory("All");
-                setTag("All");
+                setCategory(ALL);
+                setTag(ALL);
                 setQ("");
               }}
               className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-white/10"
@@ -119,7 +122,7 @@ export function ResourcesHubPage() {
               <h2 className="mt-4 text-xl font-semibold text-white">
                 <Link
                   to={`/resources/${topic.slug}`}
-                  className="rounded hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                  className="rounded hover:text-brand-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
                 >
                   {topic.title}
                 </Link>

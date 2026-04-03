@@ -2,6 +2,7 @@ import { type FormEvent, useMemo, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
+import { FormField } from "@/components/ui/FormField";
 
 type FormState = {
   name: string;
@@ -41,9 +42,19 @@ export function ContactPage() {
     setSent(true);
   }
 
+  const field = (key: keyof FormState) => ({
+    value: form[key],
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((v) => ({ ...v, [key]: e.target.value })),
+    onBlur: () => setTouched((v) => ({ ...v, [key]: true })),
+    error: errors[key],
+    touched: touched[key],
+  });
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <SectionHeader
+        as="h1"
         align="left"
         eyebrow="Contact"
         title="We would love your feedback."
@@ -54,7 +65,7 @@ export function ContactPage() {
         <Card>
           {sent ? (
             <div role="status" aria-live="polite">
-              <p className="text-slate-700">
+              <p className="text-slate-300">
                 Thanks. Your message was saved only in this local demo session and was not sent
                 to a server.
               </p>
@@ -72,84 +83,43 @@ export function ContactPage() {
             </div>
           ) : (
             <form onSubmit={onSubmit} className="space-y-5" noValidate>
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  required
-                  autoComplete="name"
-                  value={form.name}
-                  onChange={(e) => setForm((v) => ({ ...v, name: e.target.value }))}
-                  onBlur={() => setTouched((v) => ({ ...v, name: true }))}
-                  aria-invalid={Boolean(touched.name && errors.name)}
-                  aria-describedby={errors.name ? "name-error" : undefined}
-                  className="field-frost mt-2"
-                  placeholder="Your name"
-                />
-                {touched.name && errors.name ? (
-                  <p id="name-error" className="mt-2 text-xs text-amber-200">
-                    {errors.name}
-                  </p>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  value={form.email}
-                  onChange={(e) => setForm((v) => ({ ...v, email: e.target.value }))}
-                  onBlur={() => setTouched((v) => ({ ...v, email: true }))}
-                  aria-invalid={Boolean(touched.email && errors.email)}
-                  aria-describedby={errors.email ? "email-error" : undefined}
-                  className="field-frost mt-2"
-                  placeholder="you@school.edu"
-                />
-                {touched.email && errors.email ? (
-                  <p id="email-error" className="mt-2 text-xs text-amber-200">
-                    {errors.email}
-                  </p>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  value={form.message}
-                  onChange={(e) => setForm((v) => ({ ...v, message: e.target.value }))}
-                  onBlur={() => setTouched((v) => ({ ...v, message: true }))}
-                  aria-invalid={Boolean(touched.message && errors.message)}
-                  aria-describedby={errors.message ? "message-error" : undefined}
-                  className="field-frost mt-2"
-                  placeholder="How can we help?"
-                />
-                {touched.message && errors.message ? (
-                  <p id="message-error" className="mt-2 text-xs text-amber-200">
-                    {errors.message}
-                  </p>
-                ) : null}
-              </div>
+              <FormField
+                fieldId="name"
+                label="Name"
+                name="name"
+                required
+                autoComplete="name"
+                placeholder="Your name"
+                {...field("name")}
+              />
+              <FormField
+                fieldId="email"
+                label="Email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="you@school.edu"
+                {...field("email")}
+              />
+              <FormField
+                as="textarea"
+                fieldId="message"
+                label="Message"
+                name="message"
+                required
+                rows={5}
+                placeholder="How can we help?"
+                {...field("message")}
+              />
               <Button type="submit">Send message</Button>
             </form>
           )}
         </Card>
 
         <Card>
-          <h2 className="text-lg font-semibold text-slate-900">Direct contact</h2>
-          <p className="mt-3 text-sm text-slate-600">
+          <h2 className="text-lg font-semibold text-white">Direct contact</h2>
+          <p className="mt-3 text-sm text-slate-400">
             If you prefer, replace this section with your chapter&apos;s official email address or
             contact channel.
           </p>

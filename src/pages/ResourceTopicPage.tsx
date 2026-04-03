@@ -34,10 +34,11 @@ export function ResourceTopicPage() {
         <span className="mx-2" aria-hidden>
           /
         </span>
-        <span className="text-slate-700">{topic.title}</span>
+        <span className="text-slate-300">{topic.title}</span>
       </nav>
 
       <SectionHeader
+        as="h1"
         align="left"
         eyebrow="Topic guide"
         title={topic.title}
@@ -110,18 +111,16 @@ export function ResourceTopicPage() {
         <div className="mt-14">
           <h2 className="text-lg font-semibold text-white">Related topics</h2>
           <ul className="mt-4 flex flex-wrap gap-3">
-            {related.map((t) =>
-              t ? (
-                <li key={t.slug}>
-                  <Link
-                    to={`/resources/${t.slug}`}
-                    className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-slate-300 hover:bg-white/10"
-                  >
-                    {t.title}
-                  </Link>
-                </li>
-              ) : null,
-            )}
+            {related.map((t) => (
+              <li key={t.slug}>
+                <Link
+                  to={`/resources/${t.slug}`}
+                  className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-slate-300 hover:bg-white/10"
+                >
+                  {t.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       ) : null}

@@ -6,7 +6,6 @@ export type ExtensionRelease = {
   name: string;
   version: string;
   releaseDate: string;
-  summary: string;
   featureBullets: string[];
   /** Primary download (e.g. GitHub Release asset URL). Placeholder until published. */
   downloadUrl: string | null;
@@ -21,8 +20,6 @@ export const extensionRelease: ExtensionRelease = {
   name: "AccessBridge Companion",
   version: "0.1.0-poc",
   releaseDate: "2026-03-01",
-  summary:
-    "Browser companion that highlights accessibility options and supports common assistive workflows. Final packaging ships with the extension repository.",
   featureBullets: [
     "Keyboard-first navigation helpers",
     "Contrast and readability quick checks",

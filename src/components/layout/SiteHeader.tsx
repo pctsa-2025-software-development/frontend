@@ -22,7 +22,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0c0f1a]/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-surface-base/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 sm:pr-5">
         <NavLink
           to="/"
@@ -76,7 +76,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-white/10 bg-[#111527] px-4 py-4 md:hidden">
+        <div id="mobile-nav" className="border-t border-white/10 bg-surface-layer px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile main">
             {items.map((item) => (
               <NavLink

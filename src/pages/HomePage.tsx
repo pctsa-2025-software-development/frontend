@@ -3,9 +3,12 @@ import { Card } from "@/components/ui/Card";
 import { GlassPanel } from "@/components/ui/GlassPanel";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Tag } from "@/components/ui/Tag";
+import { resourceTopics } from "@/content/resources/topics";
+
+const topicCount = String(resourceTopics.length);
 
 const stats = [
-  { label: "Topic guides", value: "6", hint: "Friendly starting points for common questions", accent: "border-brand-400/30" },
+  { label: "Topic guides", value: topicCount, hint: "Friendly starting points for common questions", accent: "border-brand-400/30" },
   { label: "Primary goal", value: "A11y", hint: "Readable, keyboard-friendly pages", accent: "border-accent-violet/30" },
   { label: "Works offline", value: "Yes", hint: "Ready for school demos without Wi-Fi", accent: "border-accent-fuchsia/30" },
 ];
@@ -58,7 +61,7 @@ const highlights = [
 const credibility = [
   { title: "Student-led work", body: "Built by a team that cares deeply about inclusive communication.", stat: "100%", statLabel: "Student built" },
   { title: "Accessibility in practice", body: "Skip links, visible focus, and semantic structure are built in.", stat: "AA", statLabel: "WCAG target" },
-  { title: "Honest scope", body: "We clearly separate what is live today from what is planned next.", stat: "6", statLabel: "Topic guides" },
+  { title: "Honest scope", body: "We clearly separate what is live today from what is planned next.", stat: topicCount, statLabel: "Topic guides" },
 ];
 
 export function HomePage() {
@@ -166,7 +169,7 @@ export function HomePage() {
               {timeline.map((t) => (
                 <div key={t.year} className="relative flex items-start gap-6 md:gap-8">
                   <div className="relative z-10 hidden md:block">
-                    <div className={`h-3 w-3 rounded-full ${t.color} ring-4 ring-[#0c0f1a]`} />
+                    <div className={`h-3 w-3 rounded-full ${t.color} ring-4 ring-surface-base`} />
                   </div>
                   <GlassPanel className="flex-1 p-6">
                     <p className="text-xs font-bold uppercase tracking-widest text-brand-400">

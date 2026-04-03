@@ -1,17 +1,24 @@
-import { lazy, Suspense } from "react";
+import { type ComponentType, lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AppLayout } from "@/app/layout/AppLayout";
 import { HomePage } from "@/pages/HomePage";
 
-const AboutPage = lazy(() => import("@/pages/AboutPage").then((m) => ({ default: m.AboutPage })));
-const AccessibilityStatementPage = lazy(() => import("@/pages/AccessibilityStatementPage").then((m) => ({ default: m.AccessibilityStatementPage })));
-const ContactPage = lazy(() => import("@/pages/ContactPage").then((m) => ({ default: m.ContactPage })));
-const DownloadExtensionPage = lazy(() => import("@/pages/DownloadExtensionPage").then((m) => ({ default: m.DownloadExtensionPage })));
-const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })));
-const PrivacyPage = lazy(() => import("@/pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
-const ResourceTopicPage = lazy(() => import("@/pages/ResourceTopicPage").then((m) => ({ default: m.ResourceTopicPage })));
-const ResourcesHubPage = lazy(() => import("@/pages/ResourcesHubPage").then((m) => ({ default: m.ResourcesHubPage })));
-const TermsPage = lazy(() => import("@/pages/TermsPage").then((m) => ({ default: m.TermsPage })));
+function lazyNamed<T extends Record<string, ComponentType>>(
+  factory: () => Promise<T>,
+  name: keyof T & string,
+) {
+  return lazy(() => factory().then((m) => ({ default: m[name] })));
+}
+
+const AboutPage = lazyNamed(() => import("@/pages/AboutPage"), "AboutPage");
+const AccessibilityStatementPage = lazyNamed(() => import("@/pages/AccessibilityStatementPage"), "AccessibilityStatementPage");
+const ContactPage = lazyNamed(() => import("@/pages/ContactPage"), "ContactPage");
+const DownloadExtensionPage = lazyNamed(() => import("@/pages/DownloadExtensionPage"), "DownloadExtensionPage");
+const NotFoundPage = lazyNamed(() => import("@/pages/NotFoundPage"), "NotFoundPage");
+const PrivacyPage = lazyNamed(() => import("@/pages/PrivacyPage"), "PrivacyPage");
+const ResourceTopicPage = lazyNamed(() => import("@/pages/ResourceTopicPage"), "ResourceTopicPage");
+const ResourcesHubPage = lazyNamed(() => import("@/pages/ResourcesHubPage"), "ResourcesHubPage");
+const TermsPage = lazyNamed(() => import("@/pages/TermsPage"), "TermsPage");
 
 function PageFallback() {
   return (

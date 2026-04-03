@@ -27,7 +27,7 @@ const footerCols = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 mt-8 border-t border-white/10 bg-[#080b14]">
+    <footer className="relative z-10 mt-8 border-t border-white/10 bg-surface-deep">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
