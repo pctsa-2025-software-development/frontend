@@ -28,6 +28,7 @@ yarn-error.log*
 
 # cursor
 /.cursor
+AGENTS.md
 
 # local env files
 .env

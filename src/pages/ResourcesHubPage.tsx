@@ -65,8 +65,8 @@ export function ResourcesHubPage() {
               onClick={() => setCategory(c)}
               className={
                 c === category
-                    ? "rounded-full border border-slate-400 bg-slate-200 px-4 py-2 text-xs font-semibold text-slate-800"
-                    : "rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100"
+                    ? "rounded-full border border-brand-400/40 bg-brand-500/15 px-4 py-2 text-xs font-semibold text-brand-300"
+                    : "rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-white/10"
               }
             >
               {c}
@@ -80,7 +80,7 @@ export function ResourcesHubPage() {
                 setTag("All");
                 setQ("");
               }}
-              className="rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100"
+              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-white/10"
             >
               Reset
             </button>
@@ -97,7 +97,7 @@ export function ResourcesHubPage() {
             className="field-frost py-2"
           >
             {tags.map((t) => (
-              <option key={t} value={t} className="bg-white text-slate-900">
+              <option key={t} value={t} className="bg-slate-900 text-slate-100">
                 {t}
               </option>
             ))}
@@ -111,12 +111,12 @@ export function ResourcesHubPage() {
       <ul className="mt-10 grid gap-6 md:grid-cols-2">
         {filtered.map((topic) => (
           <li key={topic.slug}>
-            <Card className="h-full transition hover:border-slate-300 hover:shadow-md">
+            <Card className="h-full transition hover:border-white/20">
               <div className="flex flex-wrap gap-2">
                 <Tag>{topic.lastReviewed}</Tag>
                 <Tag>{topic.category}</Tag>
               </div>
-              <h2 className="mt-4 text-xl font-semibold text-slate-900">
+              <h2 className="mt-4 text-xl font-semibold text-white">
                 <Link
                   to={`/resources/${topic.slug}`}
                   className="rounded hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
@@ -124,11 +124,11 @@ export function ResourcesHubPage() {
                   {topic.title}
                 </Link>
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">{topic.summary}</p>
+              <p className="mt-3 text-sm leading-relaxed text-slate-400">{topic.summary}</p>
               <p className="mt-4 text-xs text-slate-500">Audience: {topic.audience}</p>
               <Link
                 to={`/resources/${topic.slug}`}
-                className="mt-4 inline-block text-sm font-semibold text-slate-700 hover:text-slate-900"
+                className="mt-4 inline-block text-sm font-semibold text-brand-400 hover:text-brand-300"
               >
                 Read guide →
               </Link>
