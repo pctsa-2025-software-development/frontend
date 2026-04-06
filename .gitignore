@@ -26,16 +26,9 @@ yarn-error.log*
 # ide
 /.idea
 
-# cursor
-/.cursor
-AGENTS.md
-
 # local env files
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
-# git
-/.gitignore
