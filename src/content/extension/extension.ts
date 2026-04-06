@@ -25,8 +25,10 @@ export const extensionRelease: ExtensionRelease = {
     "Contrast and readability quick checks",
     "Respectful defaults with user control",
   ],
-  downloadUrl: null,
+  downloadUrl:
+    "https://github.com/pctsa-2025-software-development/tsa-dev-extension/releases/latest/download/accessbridge-extension-chrome.zip",
   chromeWebStoreUrl: null,
   offlineArchivePath: null,
-  releaseNotesUrl: null,
+  releaseNotesUrl:
+    "https://github.com/pctsa-2025-software-development/tsa-dev-extension/releases/latest",
 };
