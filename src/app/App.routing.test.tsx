@@ -15,7 +15,7 @@ describe("App routing", () => {
   it("renders home page at /", () => {
     renderAt("/");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
-      /Making disability resources/i,
+      /Disability education that feels human/i,
     );
   });
 

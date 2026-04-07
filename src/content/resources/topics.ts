@@ -1,12 +1,11 @@
 import type { ResourceTopic } from "./types";
 
-/** Editorial content to be refined by your research team; structure is stable for expansion. */
 export const resourceTopics: ResourceTopic[] = [
   {
     slug: "mobility-support",
     title: "Mobility support",
     summary:
-      "Practical context for mobility-related barriers in daily digital and physical environments, with a focus on respectful language and accommodations.",
+      "Support and accommodations for people with mobility disabilities. Learn what barriers actually look like, what helps, and how to create spaces and experiences that work for everyone.",
     category: "Mobility",
     tags: ["educators", "employers", "family"],
     audience:
@@ -42,7 +41,7 @@ export const resourceTopics: ResourceTopic[] = [
     slug: "vision-accessibility",
     title: "Vision accessibility",
     summary:
-      "How digital content and environments can work better for people who are blind, have low vision, or use screen magnification.",
+      "How digital design, assistive technology, and inclusive practices help people who are blind, have low vision, or use screen magnification. A practical guide for designers, developers, and content creators.",
     category: "Vision",
     tags: ["designers", "developers", "content"],
     audience: "Designers, developers, and content owners building public-facing sites.",
@@ -79,7 +78,7 @@ export const resourceTopics: ResourceTopic[] = [
     slug: "hearing-accessibility",
     title: "Hearing accessibility",
     summary:
-      "Communication access in meetings, media, and classrooms for people who are Deaf, hard of hearing, or prefer captions.",
+      "Making meetings, classrooms, and media accessible for people who are Deaf, hard of hearing, or prefer captions. Practical guidance for events, video, and real-time communication.",
     category: "Hearing",
     tags: ["events", "educators", "media"],
     audience: "Event organizers, teachers, and video producers.",
@@ -116,7 +115,7 @@ export const resourceTopics: ResourceTopic[] = [
     slug: "neurodiversity-support",
     title: "Neurodiversity support",
     summary:
-      "Inclusive practices for autistic people, people with ADHD, and others—without reducing individuals to stereotypes.",
+      "Building inclusive environments for autistic people, people with ADHD, and others. Focus on what actually helps without reducing anyone to a stereotype.",
     category: "Neurodiversity",
     tags: ["managers", "educators", "teams"],
     audience: "Managers, educators, and peer teams.",
@@ -139,7 +138,7 @@ export const resourceTopics: ResourceTopic[] = [
       {
         label: "Knowbility",
         url: "https://www.knowbility.org",
-        note: "Promotes accessible technology and digital inclusion for people with disabilities.",
+        note: "Leading nonprofit promoting accessible technology and digital inclusion.",
       },
     ],
     relatedSlugs: ["workplace-accommodations", "caregiver-guides"],
@@ -148,7 +147,7 @@ export const resourceTopics: ResourceTopic[] = [
     slug: "caregiver-guides",
     title: "Caregiver guides",
     summary:
-      "High-level guidance for family members and supporters coordinating care, school, and community access.",
+      "Support for family members and advocates coordinating care, school, and community access. Practical tools to reduce stress and keep everyone on the same page.",
     category: "Caregiver",
     tags: ["family", "students"],
     audience: "Family caregivers and student advocates.",
@@ -180,7 +179,7 @@ export const resourceTopics: ResourceTopic[] = [
     slug: "workplace-accommodations",
     title: "Workplace accommodations",
     summary:
-      "Foundations for requesting and implementing reasonable accommodations in hiring and employment contexts.",
+      "How to request and implement reasonable accommodations at work. Understand the process, know your rights, and create a sustainable setup that works for you.",
     category: "Workplace",
     tags: ["employees", "hr", "managers"],
     audience: "Employees, HR partners, and team leads.",

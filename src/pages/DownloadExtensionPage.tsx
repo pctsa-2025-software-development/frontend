@@ -8,19 +8,19 @@ export function DownloadExtensionPage() {
   const r = extensionRelease;
   const hasRemote = Boolean(r.downloadUrl || r.chromeWebStoreUrl);
   const requirements = [
-    "Chrome, Edge, or Brave (Chromium-based browsers)",
-    "Keyboard-friendly interaction",
-    "No account required for this demo",
+    "Chrome, Edge, or Brave (any Chromium-based browser)",
+    "Keyboard and mouse interaction",
+    "No account required—works right away",
   ];
   const installSteps = [
-    "Download the package or open the Chrome Web Store listing.",
-    "Enable the extension and pin it if you use it often.",
-    "Open any site and use the toolbar to launch accessibility tools.",
+    "Download the extension from GitHub or the Chrome Web Store.",
+    "Enable it and optionally pin it to your toolbar.",
+    "Open any website and click the AccessBridge icon to see accessibility tools.",
   ];
   const roadmap = [
-    { title: "Feedback from classrooms", detail: "Collect notes from students and educators before wider release." },
-    { title: "WCAG quick checks", detail: "Highlight contrast and heading issues in plain language." },
-    { title: "Guided checklists", detail: "Offer step-by-step support for common accessibility improvements." },
+    { title: "Classroom feedback", detail: "Gather real-world input from students, teachers, and accessibility advocates." },
+    { title: "Quick accessibility checks", detail: "Highlight contrast, heading, and focus issues in plain language." },
+    { title: "Guided checklists", detail: "Step-by-step guidance for making websites more accessible." },
   ];
 
   return (
@@ -30,7 +30,7 @@ export function DownloadExtensionPage() {
         align="left"
         eyebrow="Download"
         title="AccessBridge Companion"
-        description="A simple browser companion designed to keep accessibility guidance within reach."
+        description="A browser extension designed to bring accessibility guidance into your daily browsing. Quick checks, reminders, and practical tools—all from your toolbar."
       />
 
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -73,11 +73,7 @@ export function DownloadExtensionPage() {
 
           {!hasRemote ? (
             <p className="mt-6 text-sm text-amber-400">
-              Add a GitHub Release asset URL or store listing in{" "}
-              <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-xs text-slate-300">
-                src/content/extension/extension.ts
-              </code>
-              .
+              The download link will be updated here when the extension is published. For now, you can explore the full website without it.
             </p>
           ) : null}
         </GlassPanel>

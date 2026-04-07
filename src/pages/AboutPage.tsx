@@ -3,12 +3,12 @@ import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const team = [
-  { name: "Project lead", role: "Direction, story, and quality checks" },
-  { name: "Engineering", role: "Frontend build, routing, and accessibility patterns" },
-  { name: "Research", role: "Topic drafts, references, and inclusive language review" },
+  { name: "Project lead", role: "Strategy, writing, and quality" },
+  { name: "Engineering", role: "Frontend architecture, routing, and accessibility" },
+  { name: "Research", role: "Topic drafts, references, and inclusive language" },
 ];
 
-const partners = ["School chapter advisors", "Local accessibility groups", "Classroom educators"];
+const partners = ["School chapter advisors", "Local accessibility organizations", "Educators and classroom partners"];
 
 export function AboutPage() {
   return (
@@ -17,30 +17,29 @@ export function AboutPage() {
         as="h1"
         align="left"
         eyebrow="About"
-        title="We built AccessBridge because clear disability education should be easier to find."
-        description="This project started as a student idea and grew into something we genuinely care about. We try to keep every page practical, respectful, and easy to follow."
+        title="Why we built AccessBridge"
+        description="Clear disability education should be easier to find. We started with real conversations, built what mattered most, and we're committed to improving it based on feedback from students, families, and educators."
       />
 
       <div className="mt-11 grid gap-6 md:grid-cols-2">
         <Card className="hover-soft-lift md:mt-2">
-          <h2 className="text-lg font-semibold text-white">What we ship in this site</h2>
+          <h2 className="text-lg font-semibold text-white">What's in this site</h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-slate-400">
-            <li>A resources hub with clear, repeatable topic pages</li>
-            <li>An extension download page tied to release metadata</li>
-            <li>Accessibility-focused UI patterns for keyboard and screen-reader use</li>
+            <li>Six resource guides covering mobility, vision, hearing, neurodiversity, caregiving, and workplace needs</li>
+            <li>Links to the AccessBridge Companion browser extension (when available)</li>
+            <li>Fully accessible UI: keyboard navigation, screen reader tested, respects user preferences</li>
           </ul>
         </Card>
         <Card className="hover-soft-lift">
-          <h2 className="text-lg font-semibold text-white">What comes next</h2>
+          <h2 className="text-lg font-semibold text-white">What's next</h2>
           <p className="mt-4 text-slate-400">
-            Next, we want to keep improving clarity and add more voices from educators,
-            students, families, and accessibility advocates.
+            We're listening to feedback from the community. Whether it's adding more guides, expanding into new topics, or building features based on real needs—we want your input.
           </p>
           <Link
-            to="/resources"
+            to="/contact"
             className="mt-4 inline-block text-sm font-semibold text-slate-300 hover:text-white"
           >
-            Browse resources →
+            Send us feedback →
           </Link>
         </Card>
       </div>
@@ -58,9 +57,9 @@ export function AboutPage() {
           </ul>
         </Card>
         <Card className="hover-soft-lift md:mt-3">
-          <h2 className="text-lg font-semibold text-white">Partners and reviewers</h2>
+          <h2 className="text-lg font-semibold text-white">Community partners</h2>
           <p className="mt-4 text-sm text-slate-400">
-            These are placeholders for now while we finish approvals with real collaborators.
+            We're grateful for feedback from educators, accessibility advocates, and real users who help shape this project.
           </p>
           <ul className="mt-4 list-inside list-disc space-y-2 text-slate-400">
             {partners.map((p) => (

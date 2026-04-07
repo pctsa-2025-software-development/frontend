@@ -8,60 +8,60 @@ import { resourceTopics } from "@/content/resources/topics";
 const topicCount = String(resourceTopics.length);
 
 const stats = [
-  { label: "Topic guides", value: topicCount, hint: "Friendly starting points for common questions", accent: "border-brand-400/30" },
-  { label: "Primary goal", value: "A11y", hint: "Readable, keyboard-friendly pages", accent: "border-accent-violet/30" },
-  { label: "Works offline", value: "Yes", hint: "Ready for school demos without Wi-Fi", accent: "border-accent-fuchsia/30" },
+  { label: "Resource guides", value: topicCount, hint: "Clear, practical starting points for everyday questions", accent: "border-brand-400/30" },
+  { label: "Built for access", value: "Yes", hint: "Keyboard-friendly, screen reader tested, works offline", accent: "border-accent-violet/30" },
+  { label: "By students, for everyone", value: "Open", hint: "Grounded in real conversations with families and educators", accent: "border-accent-fuchsia/30" },
 ];
 
 const pillars = [
   {
     icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
-    title: "Plain-language learning",
-    body: "We explain things in everyday language so families and students can understand quickly.",
+    title: "Written for real people",
+    body: "We explain disability and accessibility in everyday language, without jargon or oversimplification.",
     glow: "from-brand-500/20 to-transparent",
   },
   {
     icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z",
-    title: "Respectful design",
-    body: "Focus rings are obvious, contrast is intentional, and motion can be reduced when needed.",
+    title: "Accessibility first",
+    body: "Focus indicators are obvious, text contrast is tested, animations respect user preferences. It matters.",
     glow: "from-accent-violet/20 to-transparent",
   },
   {
     icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z",
-    title: "Practical tools",
-    body: "When extension links are ready, this site helps people find them without hunting around.",
+    title: "Built to last",
+    body: "Helpful resources, one place to find them. Created by students who genuinely care about accessibility education.",
     glow: "from-accent-fuchsia/20 to-transparent",
   },
 ];
 
 const timeline = [
-  { year: "2025", title: "Listening first", detail: "We started by noting the questions people ask most.", color: "bg-brand-400" },
-  { year: "2026", title: "First release", detail: "The website and extension concept were shared for class and judging demos.", color: "bg-accent-violet" },
-  { year: "Next", title: "Community feedback", detail: "We will keep refining content with students, families, and educators.", color: "bg-accent-fuchsia" },
+  { year: "2025", title: "Community listening", detail: "We asked educators, families, and students: What questions come up most often?", color: "bg-brand-400" },
+  { year: "2026", title: "First release", detail: "The website and extension launch for class demos and competition judging.", color: "bg-accent-violet" },
+  { year: "Ongoing", title: "Keep improving", detail: "Your feedback shapes what comes next. Sound accessibility education matters.", color: "bg-accent-fuchsia" },
 ];
 
 const highlights = [
   {
-    title: "Resource hub",
-    body: "Every guide includes key facts, common myths, and practical tips you can use right away.",
+    title: "Resource guides",
+    body: "Each guide covers key facts, common misconceptions, and real-world tips you can use right away.",
     gradient: "from-brand-500/10 via-transparent to-transparent",
   },
   {
     title: "Companion extension",
-    body: "Quick checks and reminders help keep accessibility in mind during everyday browsing.",
+    body: "A browser tool that brings accessibility reminders and quick checks to your daily browsing.",
     gradient: "from-accent-violet/10 via-transparent to-transparent",
   },
   {
-    title: "Demo support",
-    body: "Offline instructions and walkthrough notes make live demos less stressful.",
+    title: "Built for offline use",
+    body: "Works without Wi-Fi—perfect for school demos, events, and computers with limited connectivity.",
     gradient: "from-accent-fuchsia/10 via-transparent to-transparent",
   },
 ];
 
 const credibility = [
-  { title: "Student-led work", body: "Built by a team that cares deeply about inclusive communication.", stat: "100%", statLabel: "Student built" },
-  { title: "Accessibility in practice", body: "Skip links, visible focus, and semantic structure are built in.", stat: "AA", statLabel: "WCAG target" },
-  { title: "Honest scope", body: "We clearly separate what is live today from what is planned next.", stat: topicCount, statLabel: "Topic guides" },
+  { title: "Built by students", body: "A team that cares deeply about clear, honest communication around disability.", stat: "100%", statLabel: "Student-led" },
+  { title: "Accessibility tested", body: "Keyboard navigation, screen readers, and high-contrast modes are central to the design.", stat: "AA", statLabel: "WCAG level" },
+  { title: "Honest roadmap", body: "We clearly label what's available today and what's planned next. No surprises.", stat: topicCount, statLabel: "Active guides" },
 ];
 
 export function HomePage() {
@@ -74,14 +74,14 @@ export function HomePage() {
 
         <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-16 sm:px-6 sm:pt-24">
           <div className="max-w-3xl md:ml-2">
-            <Tag className="reveal">Disability education resources</Tag>
+            <Tag className="reveal">Practical accessibility resources</Tag>
             <h1 className="hero-human-heading reveal delay-1 mt-6 font-display text-5xl font-bold sm:text-7xl">
-              <span className="text-gradient-brand">Making disability resources</span>{" "}
-              <span className="text-white">clearer, kinder, and easier to use.</span>
+              <span className="text-gradient-brand">Disability education</span>{" "}
+              <span className="text-white">that feels human.</span>
             </h1>
             <p className="reveal delay-2 mt-7 max-w-2xl text-lg text-slate-400 sm:text-xl">
-              We are students who care about accessibility education. AccessBridge is our way of
-              sharing practical guides that feel less overwhelming and more useful.
+              We're students who care about accessibility. These guides help families, educators,
+              and builders understand disability in everyday language. No jargon. Just honesty.
             </p>
             <div className="reveal delay-3 mt-10 flex flex-wrap gap-4">
               <Link to="/resources" className="btn-prism px-8 py-4 text-base font-bold">

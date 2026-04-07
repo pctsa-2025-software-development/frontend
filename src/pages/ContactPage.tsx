@@ -57,8 +57,8 @@ export function ContactPage() {
         as="h1"
         align="left"
         eyebrow="Contact"
-        title="We would love your feedback."
-        description="This demo form is local-only right now, but it gives a clear example of accessible form structure."
+        title="We'd love to hear from you."
+        description="Have feedback, questions, or ideas? This form is a local demo in the browser right now, but it shows how accessible form design works in practice."
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -66,8 +66,7 @@ export function ContactPage() {
           {sent ? (
             <div role="status" aria-live="polite">
               <p className="text-slate-300">
-                Thanks. Your message was saved only in this local demo session and was not sent
-                to a server.
+                Thanks for reaching out. In a production version, your message would be securely sent to our team. For now, it's saved only in this local browser session.
               </p>
               <Button
                 type="button"

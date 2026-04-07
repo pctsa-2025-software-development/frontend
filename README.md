@@ -1,6 +1,8 @@
-# AccessBridge (TSA Software Development — website)
+# AccessBridge — Disability Education Website
 
-Professional, glassmorphic multi-page site for disability education resources and the **AccessBridge Companion** extension (metadata only in this repo; extension code lives elsewhere).
+A professional, accessible multi-page website designed to make disability education resources clearer, kinder, and easier to find. This repository contains the website frontend; the **AccessBridge Companion** browser extension is maintained separately.
+
+**Built by students who care about accessibility.** Part of the TSA Software Development competition.
 
 ## Stack
 
@@ -18,57 +20,95 @@ Professional, glassmorphic multi-page site for disability education resources an
 | `npm run lint`   | ESLint                           |
 | `npm run typecheck` | TypeScript only              |
 
-## Local development
+## Getting started
+
+**Prerequisites:** Node.js 18 or later
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL printed in the terminal (usually `http://localhost:5173`).
+Open `http://localhost:5173` in your browser to see your local development server.
 
-## Major-feature gate (before merge)
+## Pre-merge checklist
 
-1. Manually click through: `/`, `/resources`, `/download-extension`, `/contact`, `/privacy`, `/terms`, `/accessibility`, and at least one topic under `/resources/:slug`.
-2. Run: `npm run lint && npm test && npm run build`.
+Before submitting a pull request:
 
-## GitHub Pages deployment
+1. **Test all pages manually:**
+   - Home page (`/`)
+   - Resources hub (`/resources`)
+   - At least one topic page (`/resources/:slug`)
+   - Extensions page (`/download-extension`)
+   - Contact, Privacy, Terms, and Accessibility pages
 
-### One-time repository settings
+2. **Run quality checks:**
+   ```bash
+   npm run lint && npm test && npm run build
+   ```
 
-1. **Settings → Pages → Build and deployment**: Source **GitHub Actions** (not “Deploy from a branch” using `/docs` unless you switch strategy).
-2. **Settings → Actions → General → Workflow permissions**: allow **Read and write**, and allow GitHub Actions to create pull requests if prompted (read-only is not enough for Pages in some orgs).
-3. Ensure the default branch name matches the workflow (`main` or `master` — edit `.github/workflows/*.yml` if yours differs).
+## Deploying to GitHub Pages
 
-### How it works
+### Initial setup (one time)
 
-- [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs lint, tests, and build on pushes and PRs.
-- [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds with  
-  `VITE_BASE=/<repository-name>/` so asset URLs match **Project Pages** at  
-  `https://<user>.github.io/<repo>/`.
-- The workflow copies `dist/index.html` to `dist/404.html` so **client-side routes** work on refresh for nested paths.
+1. **Enable GitHub Pages:**
+   - Go to **Settings → Pages**
+   - Set **Source** to **GitHub Actions**
+
+2. **Configure workflow permissions:**
+   - Go to **Settings → Actions → General**
+   - Under **Workflow permissions**, select **Read and write**
+   - Allow GitHub Actions to create pull requests (if prompted)
+
+3. **Verify branch name:**
+   - Ensure your default branch name (`main` or `master`) matches the branch name in `.github/workflows/*.yml`
+   - Edit workflow files if needed
+
+### How deployment works
+
+- **CI workflow** ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)): Automatically runs linting, tests, and builds on every push and pull request
+- **Deploy workflow** ([`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)):
+  - Sets `VITE_BASE=/<repository-name>/` so all assets load correctly on GitHub Pages subpaths
+  - Publishes the built site to `https://<your-username>.github.io/<repo>/`
+  - Copies `dist/index.html` to `dist/404.html` so nested routes (like `/resources/topic-name`) work on page refresh
 
 ### Custom domain (optional)
 
-Add your domain under **Pages** and commit a `CNAME` file in `public/` if you use a subdomain; update `VITE_BASE` to `/` for root-hosted sites and adjust workflows accordingly.
+To use a custom domain:
+1. Add your domain under **Settings → Pages**
+2. Create a `CNAME` file in `public/` with your domain name
+3. Update `VITE_BASE` to `/` in your workflow files
+4. Update any hardcoded URLs in the codebase as needed
 
 ### Troubleshooting
 
-- **Blank page or broken assets**: `VITE_BASE` must match the repo segment of the GitHub Pages URL. For Project Pages, keep the deploy workflow’s default.
-- **404 on refresh** for `/resources/foo`: ensure `404.html` step ran (see deploy workflow) and that you redeployed after adding it.
+**Blank page or broken assets:**
+- Check that `VITE_BASE` in your workflow matches your GitHub Pages URL
+- For Project Pages, it should be `/<repository-name>/`
+- For custom domains, it should be `/`
 
-## Offline / no-Wi-Fi event demo
+**Routes not working after refresh (e.g., `/resources/topic`):**
+- Verify the `404.html` step ran in the deploy workflow
+- Ensure you redeployed after the workflow was updated
+- Check that `dist/404.html` exists in your built site
 
-See [docs/TSA_OFFLINE_DEMO.md](docs/TSA_OFFLINE_DEMO.md).
+## For competition events
 
-## Judging: suggested code walkthrough
+- **Demo without Wi-Fi?** See [Offline Event Demo](docs/TSA_OFFLINE_DEMO.md) for preparation tips.
+- **Being judged on code?** See [Code Walkthrough Guide](docs/JUDGING_CODE_WALKTHROUGH.md) for a structured explanation of the architecture.
 
-See [docs/JUDGING_CODE_WALKTHROUGH.md](docs/JUDGING_CODE_WALKTHROUGH.md).
+## Project structure
 
-## Project layout
-
-- `src/app/` — router and shell layout
-- `src/pages/` — route-level pages
-- `src/components/ui/` — reusable primitives (buttons, glass panels, cards)
-- `src/content/resources/` — typed topic articles
-- `src/content/extension/` — extension release metadata (URLs placeholders until published)
+```
+src/
+├── app/              Router and shell layout
+├── pages/            Page components for each route
+├── components/
+│   ├── layout/       Header, footer, skip link, etc.
+│   └── ui/           Reusable UI primitives (buttons, cards, panels)
+├── content/
+│   ├── resources/    Topic articles and metadata
+│   └── extension/    Extension release information
+├── lib/              Utilities (CSS class merging, etc.)
+└── test/             Test configuration
+```
