@@ -30,13 +30,13 @@ export default {
       },
       fontFamily: {
         sans: [
-          "Newsreader",
+          "Plus Jakarta Sans",
           "system-ui",
           "-apple-system",
           "Segoe UI",
           "sans-serif",
         ],
-        display: ["Syne", "Newsreader", "system-ui", "sans-serif"],
+        display: ["Outfit", "Plus Jakarta Sans", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "mesh-1":
