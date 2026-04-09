@@ -4,6 +4,21 @@ import { Card } from "@/components/ui/Card";
 import { GlassPanel } from "@/components/ui/GlassPanel";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
+const screenshotBase = import.meta.env.BASE_URL;
+
+const extensionScreenshots = [
+  {
+    src: `${screenshotBase}screenshots/snapshot1.png`,
+    caption: "Focus Enhancement",
+    alt: "Project Delos extension highlights the navigatable elements on the page",
+  },
+  {
+    src: `${screenshotBase}screenshots/snapshot2.png`,
+    caption: "High Contrast",
+    alt: "Project Delos extension inverts the colors of the page to improve contrast",
+  },
+] as const;
+
 export function DownloadExtensionPage() {
   const r = extensionRelease;
   const hasRemote = Boolean(r.downloadUrl || r.chromeWebStoreUrl);
@@ -152,18 +167,24 @@ export function DownloadExtensionPage() {
         <Card className="lg:col-span-2">
           <h2 className="text-lg font-semibold text-slate-900">Screenshots</h2>
           <p className="mt-3 text-sm text-slate-500">
-            Replace these placeholders with real extension screens when they are ready.
+            The extension popup and toolbar in context.
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {["Toolbar overview", "Accessibility panel"].map((label) => (
-              <div
-                key={label}
-                role="img"
-                aria-label={`Placeholder: ${label} screenshot`}
-                className="flex h-40 items-center justify-center rounded-xl border border-dashed border-white/60 bg-white/30 text-xs text-slate-400 backdrop-blur-glass"
-              >
-                {label} screenshot
-              </div>
+            {extensionScreenshots.map((shot) => (
+              <figure key={shot.src} className="overflow-hidden rounded-xl border border-white/60 bg-white/30 backdrop-blur-glass">
+                <img
+                  src={shot.src}
+                  alt={shot.alt}
+                  width={640}
+                  height={360}
+                  className="h-auto w-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption className="border-t border-white/40 px-3 py-2 text-center text-xs font-medium text-slate-500">
+                  {shot.caption}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </Card>
