@@ -119,7 +119,7 @@ export function HomePage() {
           {pillars.map((p, i) => (
             <div key={p.title} style={{ marginTop: i === 1 ? "1.5rem" : undefined }}>
               <Card className="hover-soft-lift h-full">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-200 bg-brand-50">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-200/40 bg-brand-50/50 backdrop-blur-sm">
                   <svg className="h-6 w-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
                     <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
                   </svg>

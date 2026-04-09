@@ -6,8 +6,8 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
     "rounded-lg px-3 py-2 text-sm font-medium transition",
     isActive
-      ? "bg-brand-500/10 text-brand-700"
-      : "text-slate-600 hover:bg-brand-50 hover:text-slate-900",
+      ? "bg-brand-500/10 text-brand-700 backdrop-blur-sm"
+      : "text-slate-600 hover:bg-white/40 hover:text-slate-900 hover:backdrop-blur-sm",
   );
 
 const items: { to: string; label: string }[] = [
@@ -22,14 +22,14 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/60 bg-white/40 shadow-glass backdrop-blur-glass-lg">
+    <header className="sticky top-0 z-50 border-b border-white/40 bg-white/25 shadow-glass backdrop-blur-glass-lg">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 sm:pr-5">
         <NavLink
           to="/"
           className="reveal flex items-center gap-2.5 text-lg font-bold tracking-tight text-slate-900"
         >
           <span
-            className="flex h-9 w-9 items-center justify-center rounded-xl border border-brand-500/30 bg-brand-500/10 text-sm font-black text-brand-700"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-brand-500/20 bg-brand-500/10 text-sm font-black text-brand-700 backdrop-blur-sm"
             aria-hidden
           >
             PD
@@ -53,7 +53,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-white/60 bg-white/50 p-2 text-slate-600 backdrop-blur-glass md:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/30 p-2 text-slate-600 backdrop-blur-glass md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -76,7 +76,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-white/50 bg-white/50 px-4 py-4 backdrop-blur-glass-lg md:hidden">
+        <div id="mobile-nav" className="border-t border-white/30 bg-white/25 px-4 py-4 backdrop-blur-glass-lg md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile main">
             {items.map((item) => (
               <NavLink

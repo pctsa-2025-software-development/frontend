@@ -5,11 +5,11 @@
 @layer base {
   :root {
     --bg-base: #faf8f5;
-    --bg-layer: #ffffff;
+    --bg-layer: rgba(255, 255, 255, 0.55);
     --text-main: #1e293b;
     --text-dim: #475569;
-    --panel-bg: #ffffff;
-    --panel-border: rgba(0, 0, 0, 0.08);
+    --panel-bg: rgba(255, 255, 255, 0.55);
+    --panel-border: rgba(255, 255, 255, 0.6);
     --ring: #0d9488;
     --accent: #14b8a6;
     --accent-secondary: #f87171;

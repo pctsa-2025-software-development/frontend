@@ -118,7 +118,7 @@ export function ResourcesHubPage() {
       <ul className="mt-10 grid gap-6 md:grid-cols-2">
         {filtered.map((topic) => (
           <li key={topic.slug}>
-            <Card className="h-full transition hover:border-black/15">
+            <Card className="h-full transition hover:border-white/90">
               <div className="flex flex-wrap gap-2">
                 <Tag>{topic.lastReviewed}</Tag>
                 <Tag>{topic.category}</Tag>

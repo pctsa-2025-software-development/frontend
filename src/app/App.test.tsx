@@ -11,7 +11,7 @@ describe("App", () => {
       </MemoryRouter>,
     );
     expect(getByRole("heading", { level: 1 })).toHaveTextContent(
-      /Disability education that feels human/i,
+      /making accessibility/i,
     );
   });
 });

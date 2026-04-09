@@ -91,7 +91,7 @@ export function DownloadExtensionPage() {
             </h2>
             <p className="mt-3 text-sm text-slate-500">
               For events without Wi-Fi, install from a local archive or demo the website with{" "}
-              <code className="rounded bg-slate-100 px-1 font-mono text-xs text-slate-600">npm run preview</code>{" "}
+              <code className="rounded bg-white/40 px-1 font-mono text-xs text-slate-600 backdrop-blur-sm">npm run preview</code>{" "}
               after a production build.
             </p>
             {r.offlineArchivePath ? (

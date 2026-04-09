@@ -4,9 +4,9 @@ import { cn } from "@/lib/cn";
 const variants = {
   primary: "btn-prism",
   secondary: "btn-frost",
-  ghost: "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
+  ghost: "text-slate-600 hover:bg-white/40 hover:text-slate-900 hover:backdrop-blur-sm",
   outline:
-    "border border-black/10 bg-transparent text-slate-600 hover:border-black/20 hover:bg-slate-50",
+    "border border-white/60 bg-white/20 text-slate-600 backdrop-blur-sm hover:border-white/80 hover:bg-white/40",
 } as const;
 
 type Variant = keyof typeof variants;
