@@ -16,6 +16,8 @@ export type ExtensionRelease = {
   releaseNotesUrl: string | null;
 };
 
+const base = import.meta.env.BASE_URL;
+
 export const extensionRelease: ExtensionRelease = {
   name: "AccessBridge Companion",
   version: "0.1.0-poc",
@@ -25,10 +27,9 @@ export const extensionRelease: ExtensionRelease = {
     "Contrast and readability quick checks",
     "Respectful defaults with user control",
   ],
-  downloadUrl:
-    "https://github.com/pctsa-2025-software-development/tsa-dev-extension/releases/latest/download/accessbridge-extension-chrome.zip",
+  downloadUrl: `${base}accessbridge-extension-chrome.zip`,
   chromeWebStoreUrl: null,
-  offlineArchivePath: null,
+  offlineArchivePath: `${base}accessbridge-extension-chrome.zip`,
   releaseNotesUrl:
     "https://github.com/pctsa-2025-software-development/tsa-dev-extension/releases/latest",
 };
