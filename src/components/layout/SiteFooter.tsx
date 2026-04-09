@@ -27,7 +27,7 @@ const footerCols = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 mt-8 border-t border-black/5 bg-surface-deep">
+    <footer className="relative z-10 mt-8 border-t border-white/50 bg-surface-deep/70 backdrop-blur-glass-lg">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
@@ -57,7 +57,7 @@ export function SiteFooter() {
             </div>
           ))}
         </div>
-        <p className="mt-12 border-t border-black/5 pt-8 text-center text-xs text-slate-400">
+        <p className="mt-12 border-t border-white/40 pt-8 text-center text-xs text-slate-400">
           &copy; {new Date().getFullYear()} Project Delos. Built with care by students for TSA Software
           Development.
         </p>

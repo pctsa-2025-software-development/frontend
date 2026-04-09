@@ -45,6 +45,14 @@ export default {
           "0 10px 25px -5px rgba(0,0,0,0.08), 0 4px 10px -5px rgba(0,0,0,0.04)",
         "card-lg":
           "0 20px 40px -12px rgba(0,0,0,0.1), 0 4px 12px -2px rgba(0,0,0,0.05)",
+        glass:
+          "0 4px 16px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.7)",
+        "glass-lg":
+          "0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)",
+      },
+      backdropBlur: {
+        glass: "14px",
+        "glass-lg": "20px",
       },
     },
   },

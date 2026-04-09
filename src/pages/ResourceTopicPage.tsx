@@ -26,7 +26,9 @@ export function ResourceTopicPage() {
     .filter((t): t is NonNullable<typeof t> => Boolean(t));
 
   return (
-    <article className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <article className="relative mx-auto max-w-6xl overflow-hidden px-4 py-16 sm:px-6">
+      <div className="glass-orb -right-28 top-20 h-[320px] w-[320px] bg-brand-200/40" aria-hidden />
+      <div className="glass-orb -left-20 top-1/2 h-[240px] w-[240px] bg-accent-coral/25" aria-hidden />
       <nav aria-label="Breadcrumb" className="text-sm text-slate-400">
         <Link to="/resources" className="hover:text-slate-900">
           Resources
@@ -115,7 +117,7 @@ export function ResourceTopicPage() {
               <li key={t.slug}>
                 <Link
                   to={`/resources/${t.slug}`}
-                  className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"
+                  className="rounded-full border border-white/60 bg-white/50 px-4 py-2 text-sm text-slate-600 backdrop-blur-glass hover:bg-white/70"
                 >
                   {t.title}
                 </Link>

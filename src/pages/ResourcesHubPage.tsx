@@ -36,7 +36,10 @@ export function ResourcesHubPage() {
   }, [category, q, tag]);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div className="relative mx-auto max-w-6xl overflow-hidden px-4 py-16 sm:px-6">
+      <div className="glass-orb -left-32 top-12 h-[350px] w-[350px] bg-brand-200/40" aria-hidden />
+      <div className="glass-orb -right-20 top-1/3 h-[300px] w-[300px] bg-accent-coral/25" aria-hidden />
+      <div className="glass-orb left-1/3 bottom-32 h-[240px] w-[240px] bg-accent-amber/20" aria-hidden />
       <SectionHeader
         as="h1"
         align="left"
@@ -69,8 +72,8 @@ export function ResourcesHubPage() {
               onClick={() => setCategory(c)}
               className={
                 c === category
-                    ? "rounded-full border border-brand-500/30 bg-brand-50 px-4 py-2 text-xs font-semibold text-brand-700"
-                    : "rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
+                    ? "rounded-full border border-brand-500/30 bg-brand-50/60 px-4 py-2 text-xs font-semibold text-brand-700 backdrop-blur-glass"
+                    : "rounded-full border border-white/60 bg-white/50 px-4 py-2 text-xs font-semibold text-slate-600 backdrop-blur-glass hover:bg-white/70"
               }
             >
               {c}
@@ -84,7 +87,7 @@ export function ResourcesHubPage() {
                 setTag(ALL);
                 setQ("");
               }}
-              className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
+              className="rounded-full border border-white/60 bg-white/50 px-4 py-2 text-xs font-semibold text-slate-600 backdrop-blur-glass hover:bg-white/70"
             >
               Reset
             </button>

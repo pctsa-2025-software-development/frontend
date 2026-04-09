@@ -13,7 +13,10 @@ const partners = ["School chapter advisors", "Local accessibility organizations"
 
 export function AboutPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div className="relative mx-auto max-w-6xl overflow-hidden px-4 py-16 sm:px-6">
+      <div className="glass-orb -right-32 top-0 h-[360px] w-[360px] bg-brand-200/50" aria-hidden />
+      <div className="glass-orb -left-24 top-1/2 h-[280px] w-[280px] bg-accent-coral/30" aria-hidden />
+      <div className="glass-orb right-1/4 bottom-20 h-[220px] w-[220px] bg-accent-amber/25" aria-hidden />
       <SectionHeader
         as="h1"
         align="left"

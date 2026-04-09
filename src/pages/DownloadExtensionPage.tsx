@@ -24,7 +24,10 @@ export function DownloadExtensionPage() {
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div className="relative mx-auto max-w-6xl overflow-hidden px-4 py-16 sm:px-6">
+      <div className="glass-orb -right-28 top-0 h-[380px] w-[380px] bg-brand-200/45" aria-hidden />
+      <div className="glass-orb -left-20 top-1/2 h-[260px] w-[260px] bg-accent-coral/30" aria-hidden />
+      <div className="glass-orb right-1/3 bottom-40 h-[200px] w-[200px] bg-accent-amber/25" aria-hidden />
       <SectionHeader
         as="h1"
         align="left"
@@ -157,7 +160,7 @@ export function DownloadExtensionPage() {
                 key={label}
                 role="img"
                 aria-label={`Placeholder: ${label} screenshot`}
-                className="flex h-40 items-center justify-center rounded-xl border border-dashed border-black/10 bg-slate-50 text-xs text-slate-400"
+                className="flex h-40 items-center justify-center rounded-xl border border-dashed border-white/60 bg-white/30 text-xs text-slate-400 backdrop-blur-glass"
               >
                 {label} screenshot
               </div>

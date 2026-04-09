@@ -65,7 +65,10 @@ export function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-black/5">
+      <section className="relative overflow-hidden border-b border-white/40">
+        <div className="glass-orb -left-32 -top-20 h-[420px] w-[420px] bg-brand-300" aria-hidden />
+        <div className="glass-orb -right-24 top-40 h-[350px] w-[350px] bg-accent-coral/60" aria-hidden />
+        <div className="glass-orb left-1/3 top-72 h-[260px] w-[260px] bg-accent-amber/40" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-16 sm:px-6 sm:pt-24">
           <div className="max-w-3xl md:ml-2">
             <Tag className="reveal">Practical accessibility resources</Tag>
@@ -105,7 +108,8 @@ export function HomePage() {
       </section>
 
       {/* Pillars */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6">
+      <section className="relative mx-auto max-w-6xl overflow-hidden px-4 pb-16 pt-24 sm:px-6">
+        <div className="glass-orb -right-40 top-0 h-[300px] w-[300px] bg-brand-200/60" aria-hidden />
         <SectionHeader
           eyebrow="Why we built this"
           title="Built to help first, and to feel human while doing it."
@@ -129,9 +133,10 @@ export function HomePage() {
       </section>
 
       {/* Student quote */}
-      <section className="py-12">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <blockquote className="surface-card relative rounded-2xl p-8 sm:p-10">
+      <section className="relative overflow-hidden py-12">
+        <div className="glass-orb left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 bg-brand-100/60" aria-hidden />
+        <div className="relative mx-auto max-w-3xl px-4 sm:px-6">
+          <blockquote className="surface-card-strong relative rounded-2xl p-8 sm:p-10">
             <svg className="absolute left-6 top-6 h-8 w-8 text-brand-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.71 11 13.267 11 15.165 11 16.117 10.615 17.03 9.93 17.69 9.245 18.35 8.328 18.72 7.371 18.72c-1.084 0-2.12-.468-2.788-1.399zM14.583 17.321C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.71 21 13.267 21 15.165c0 .952-.385 1.865-1.07 2.525-.685.66-1.602 1.03-2.559 1.03-1.084 0-2.12-.468-2.788-1.399z" />
             </svg>
@@ -147,8 +152,10 @@ export function HomePage() {
       </section>
 
       {/* Highlights */}
-      <section className="border-y border-black/5 py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative overflow-hidden border-y border-white/40 py-16">
+        <div className="glass-orb -left-28 top-10 h-[280px] w-[280px] bg-accent-coral/40" aria-hidden />
+        <div className="glass-orb right-0 top-1/2 h-[220px] w-[220px] bg-brand-200/50" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
             eyebrow="What you can do here"
             title="Start with a guide, then take practical next steps."
@@ -165,8 +172,9 @@ export function HomePage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative overflow-hidden py-20">
+        <div className="glass-orb -left-16 top-1/3 h-[240px] w-[240px] bg-brand-200/40" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
             eyebrow="Roadmap"
             title="How the project is growing over time."
@@ -194,8 +202,10 @@ export function HomePage() {
       </section>
 
       {/* Credibility */}
-      <section className="border-y border-black/5 py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative overflow-hidden border-y border-white/40 py-20">
+        <div className="glass-orb right-10 top-8 h-[260px] w-[260px] bg-brand-300/40" aria-hidden />
+        <div className="glass-orb -left-20 bottom-0 h-[200px] w-[200px] bg-accent-amber/30" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
             eyebrow="Credibility"
             title="What keeps this work grounded."
@@ -215,8 +225,10 @@ export function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative overflow-hidden py-24">
+        <div className="glass-orb left-1/4 top-0 h-[300px] w-[300px] bg-brand-200/40" aria-hidden />
+        <div className="glass-orb right-1/4 bottom-0 h-[220px] w-[220px] bg-accent-coral/30" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <div className="surface-card-strong p-10 sm:p-14">
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
               <div>

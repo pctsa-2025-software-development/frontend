@@ -22,7 +22,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-surface-base/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/60 bg-white/40 shadow-glass backdrop-blur-glass-lg">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 sm:pr-5">
         <NavLink
           to="/"
@@ -53,7 +53,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-black/10 bg-white p-2 text-slate-600 md:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-white/60 bg-white/50 p-2 text-slate-600 backdrop-blur-glass md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -76,7 +76,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-black/5 bg-white px-4 py-4 md:hidden">
+        <div id="mobile-nav" className="border-t border-white/50 bg-white/50 px-4 py-4 backdrop-blur-glass-lg md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile main">
             {items.map((item) => (
               <NavLink

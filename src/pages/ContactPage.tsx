@@ -52,7 +52,9 @@ export function ContactPage() {
   });
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div className="relative mx-auto max-w-6xl overflow-hidden px-4 py-16 sm:px-6">
+      <div className="glass-orb -left-28 top-4 h-[320px] w-[320px] bg-brand-200/40" aria-hidden />
+      <div className="glass-orb -right-16 top-1/3 h-[250px] w-[250px] bg-accent-coral/30" aria-hidden />
       <SectionHeader
         as="h1"
         align="left"
