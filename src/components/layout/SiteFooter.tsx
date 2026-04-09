@@ -27,27 +27,27 @@ const footerCols = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 mt-8 border-t border-white/10 bg-surface-deep">
+    <footer className="relative z-10 mt-8 border-t border-black/5 bg-surface-deep">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
-            <p className="font-display text-lg font-bold text-white">AccessBridge</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-400">
+            <p className="font-display text-lg font-bold text-slate-900">Project Delos</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-500">
               A student-built project sharing clear disability resources and practical
               accessibility support for everyday use.
             </p>
           </div>
           {footerCols.map((col) => (
             <div key={col.title}>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-400">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-600">
                 {col.title}
-              </p>
+              </h2>
               <ul className="mt-4 space-y-2">
                 {col.links.map((l) => (
                   <li key={l.to}>
                     <Link
                       to={l.to}
-                      className="text-sm text-slate-400 transition hover:text-white"
+                      className="text-sm text-slate-500 transition hover:text-slate-900"
                     >
                       {l.label}
                     </Link>
@@ -57,8 +57,8 @@ export function SiteFooter() {
             </div>
           ))}
         </div>
-        <p className="mt-12 border-t border-white/10 pt-8 text-center text-xs text-slate-500">
-          &copy; {new Date().getFullYear()} AccessBridge. Built with care by students for TSA Software
+        <p className="mt-12 border-t border-black/5 pt-8 text-center text-xs text-slate-400">
+          &copy; {new Date().getFullYear()} Project Delos. Built with care by students for TSA Software
           Development.
         </p>
       </div>

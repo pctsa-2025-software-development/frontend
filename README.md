@@ -1,6 +1,6 @@
-# AccessBridge — Disability Education Website
+# Project Delos — Disability Education Website
 
-A professional, accessible multi-page website designed to make disability education resources clearer, kinder, and easier to find. This repository contains the website frontend; the **AccessBridge Companion** browser extension is maintained separately.
+A professional, accessible multi-page website designed to make disability education resources clearer, kinder, and easier to find. This repository contains the website frontend; the **Project Delos Companion** browser extension is maintained separately.
 
 **Built by students who care about accessibility.** Part of the TSA Software Development competition.
 

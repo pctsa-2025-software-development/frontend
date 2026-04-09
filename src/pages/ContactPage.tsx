@@ -1,4 +1,4 @@
-import { type FormEvent, useMemo, useState } from "react";
+import { type ChangeEvent, type FormEvent, useMemo, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
@@ -44,7 +44,7 @@ export function ContactPage() {
 
   const field = (key: keyof FormState) => ({
     value: form[key],
-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm((v) => ({ ...v, [key]: e.target.value })),
     onBlur: () => setTouched((v) => ({ ...v, [key]: true })),
     error: errors[key],
@@ -65,8 +65,8 @@ export function ContactPage() {
         <Card>
           {sent ? (
             <div role="status" aria-live="polite">
-              <p className="text-slate-300">
-                Thanks for reaching out. In a production version, your message would be securely sent to our team. For now, it's saved only in this local browser session.
+              <p className="text-slate-600">
+                Thanks for reaching out. In a production version, your message would be securely sent to our team. For now, it&rsquo;s saved only in this local browser session.
               </p>
               <Button
                 type="button"
@@ -117,12 +117,12 @@ export function ContactPage() {
         </Card>
 
         <Card>
-          <h2 className="text-lg font-semibold text-white">Direct contact</h2>
-          <p className="mt-3 text-sm text-slate-400">
+          <h2 className="text-lg font-semibold text-slate-900">Direct contact</h2>
+          <p className="mt-3 text-sm text-slate-500">
             If you prefer, replace this section with your chapter&apos;s official email address or
             contact channel.
           </p>
-          <p className="mt-6 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-400">
             We keep privacy messaging simple: this demo does not store submissions long term.
           </p>
         </Card>

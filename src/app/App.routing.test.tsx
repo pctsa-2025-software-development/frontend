@@ -15,14 +15,14 @@ describe("App routing", () => {
   it("renders home page at /", () => {
     renderAt("/");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
-      /Disability education that feels human/i,
+      /making accessibility/i,
     );
   });
 
   it("renders about page at /about", async () => {
     renderAt("/about");
     await waitFor(
-      () => expect(screen.getByText(/built AccessBridge/i)).toBeInTheDocument(),
+      () => expect(screen.getByText(/built Project Delos/i)).toBeInTheDocument(),
       { timeout: 5000 },
     );
   });
@@ -39,7 +39,7 @@ describe("App routing", () => {
     renderAt("/download-extension");
     await waitFor(
       () => {
-        const matches = screen.getAllByText(/AccessBridge Companion/i);
+        const matches = screen.getAllByText(/Project Delos Companion/i);
         expect(matches.length).toBeGreaterThanOrEqual(1);
       },
       { timeout: 5000 },

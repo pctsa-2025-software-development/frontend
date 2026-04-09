@@ -26,8 +26,8 @@ export function ResourcesHubPage() {
     const s = q.trim().toLowerCase();
     return resourceTopics.filter(
       (t) =>
-        (category === "All" || t.category === category) &&
-        (tag === "All" || t.tags.includes(tag)) &&
+        (category === ALL || t.category === category) &&
+        (tag === ALL || t.tags.includes(tag)) &&
         (!s ||
           t.title.toLowerCase().includes(s) ||
           t.summary.toLowerCase().includes(s) ||
@@ -65,11 +65,12 @@ export function ResourcesHubPage() {
             <button
               key={c}
               type="button"
+              aria-pressed={c === category}
               onClick={() => setCategory(c)}
               className={
                 c === category
-                    ? "rounded-full border border-brand-400/40 bg-brand-500/15 px-4 py-2 text-xs font-semibold text-brand-300"
-                    : "rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-white/10"
+                    ? "rounded-full border border-brand-500/30 bg-brand-50 px-4 py-2 text-xs font-semibold text-brand-700"
+                    : "rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
               }
             >
               {c}
@@ -83,14 +84,14 @@ export function ResourcesHubPage() {
                 setTag(ALL);
                 setQ("");
               }}
-              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-white/10"
+              className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
             >
               Reset
             </button>
           )}
         </div>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500" htmlFor="audience-tag">
+          <label className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-400" htmlFor="audience-tag">
             Audience
           </label>
           <select
@@ -100,7 +101,7 @@ export function ResourcesHubPage() {
             className="field-frost py-2"
           >
             {tags.map((t) => (
-              <option key={t} value={t} className="bg-slate-900 text-slate-100">
+              <option key={t} value={t}>
                 {t}
               </option>
             ))}
@@ -114,26 +115,26 @@ export function ResourcesHubPage() {
       <ul className="mt-10 grid gap-6 md:grid-cols-2">
         {filtered.map((topic) => (
           <li key={topic.slug}>
-            <Card className="h-full transition hover:border-white/20">
+            <Card className="h-full transition hover:border-black/15">
               <div className="flex flex-wrap gap-2">
                 <Tag>{topic.lastReviewed}</Tag>
                 <Tag>{topic.category}</Tag>
               </div>
-              <h2 className="mt-4 text-xl font-semibold text-white">
+              <h2 className="mt-4 text-xl font-semibold text-slate-900">
                 <Link
                   to={`/resources/${topic.slug}`}
-                  className="rounded hover:text-brand-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
+                  className="rounded hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
                 >
                   {topic.title}
                 </Link>
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">{topic.summary}</p>
-              <p className="mt-4 text-xs text-slate-500">Audience: {topic.audience}</p>
+              <p className="mt-3 text-sm leading-relaxed text-slate-500">{topic.summary}</p>
+              <p className="mt-4 text-xs text-slate-400">Audience: {topic.audience}</p>
               <Link
                 to={`/resources/${topic.slug}`}
-                className="mt-4 inline-block text-sm font-semibold text-brand-400 hover:text-brand-300"
+                className="mt-4 inline-block text-sm font-semibold text-brand-600 hover:text-brand-700"
               >
-                Read guide →
+                Read guide &rarr;
               </Link>
             </Card>
           </li>

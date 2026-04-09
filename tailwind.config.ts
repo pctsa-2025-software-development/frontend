@@ -6,26 +6,26 @@ export default {
     extend: {
       colors: {
         surface: {
-          base: "#0c0f1a",
-          layer: "#111527",
-          deep: "#080b14",
+          base: "#faf8f5",
+          layer: "#ffffff",
+          deep: "#f3f0eb",
         },
         brand: {
-          50: "#ecfeff",
-          100: "#cffafe",
-          200: "#a5f3fc",
-          300: "#67e8f9",
-          400: "#22d3ee",
-          500: "#06b6d4",
-          600: "#0891b2",
-          700: "#0e7490",
-          800: "#155e75",
-          900: "#164e63",
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          200: "#99f6e4",
+          300: "#5eead4",
+          400: "#2dd4bf",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          800: "#115e59",
+          900: "#134e4a",
         },
         accent: {
-          violet: "#9b87f5",
-          fuchsia: "#fb7185",
+          coral: "#f87171",
           amber: "#f59e0b",
+          rose: "#fb7185",
         },
       },
       fontFamily: {
@@ -37,18 +37,14 @@ export default {
           "sans-serif",
         ],
         display: ["Outfit", "Plus Jakarta Sans", "system-ui", "sans-serif"],
-      },
-      backgroundImage: {
-        "mesh-1":
-          "radial-gradient(at 40% 20%, rgba(34,211,238,0.34) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(155,135,245,0.22) 0px, transparent 45%), radial-gradient(at 0% 50%, rgba(251,113,133,0.2) 0px, transparent 50%)",
+        handwritten: ["Caveat", "cursive"],
       },
       boxShadow: {
-        glass: "0 8px 32px rgba(4, 8, 24, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-        "glass-lg":
-          "0 25px 50px -12px rgba(4, 8, 24, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.14)",
-      },
-      backdropBlur: {
-        xs: "2px",
+        card: "0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)",
+        "card-hover":
+          "0 10px 25px -5px rgba(0,0,0,0.08), 0 4px 10px -5px rgba(0,0,0,0.04)",
+        "card-lg":
+          "0 20px 40px -12px rgba(0,0,0,0.1), 0 4px 12px -2px rgba(0,0,0,0.05)",
       },
     },
   },

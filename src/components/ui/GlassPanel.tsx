@@ -9,7 +9,7 @@ export function GlassPanel({
   return (
     <div
       className={cn(
-        "surface-glass rounded-2xl",
+        "surface-card rounded-2xl",
         className,
       )}
       {...props}

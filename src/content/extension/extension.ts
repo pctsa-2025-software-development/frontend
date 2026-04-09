@@ -19,7 +19,7 @@ export type ExtensionRelease = {
 const base = import.meta.env.BASE_URL;
 
 export const extensionRelease: ExtensionRelease = {
-  name: "AccessBridge Companion",
+  name: "Project Delos Companion",
   version: "0.1.0-poc",
   releaseDate: "2026-03-01",
   featureBullets: [
@@ -27,9 +27,9 @@ export const extensionRelease: ExtensionRelease = {
     "Contrast and readability quick checks",
     "Respectful defaults with user control",
   ],
-  downloadUrl: `${base}accessbridge-extension-chrome.zip`,
+  downloadUrl: `${base}project-delos-extension-chrome.zip`,
   chromeWebStoreUrl: null,
-  offlineArchivePath: `${base}accessbridge-extension-chrome.zip`,
+  offlineArchivePath: `${base}project-delos-extension-chrome.zip`,
   releaseNotesUrl:
     "https://github.com/pctsa-2025-software-development/tsa-dev-extension/releases/latest",
 };

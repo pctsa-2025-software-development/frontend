@@ -1,6 +1,6 @@
 {
-  "short_name": "AccessBridge",
-  "name": "AccessBridge — Disability resources",
+  "short_name": "Project Delos",
+  "name": "Project Delos — Disability resources",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -11,6 +11,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0c4a6e",
-  "background_color": "#020617"
+  "theme_color": "#0d9488",
+  "background_color": "#faf8f5"
 }

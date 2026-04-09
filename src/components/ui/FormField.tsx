@@ -26,7 +26,7 @@ export function FormField(props: Props) {
 
   return (
     <div>
-      <label htmlFor={fieldId} className="block text-sm font-medium text-slate-300">
+      <label htmlFor={fieldId} className="block text-sm font-medium text-slate-700">
         {label}
       </label>
       {as === "textarea" ? (
@@ -47,7 +47,7 @@ export function FormField(props: Props) {
         />
       )}
       {showError ? (
-        <p id={errorId} className="mt-2 text-xs text-amber-200">
+        <p id={errorId} className="mt-2 text-xs text-red-500">
           {error}
         </p>
       ) : null}

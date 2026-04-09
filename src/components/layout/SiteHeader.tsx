@@ -6,8 +6,8 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
     "rounded-lg px-3 py-2 text-sm font-medium transition",
     isActive
-      ? "bg-white/10 text-brand-300"
-      : "text-slate-300 hover:bg-white/5 hover:text-white",
+      ? "bg-brand-500/10 text-brand-700"
+      : "text-slate-600 hover:bg-brand-50 hover:text-slate-900",
   );
 
 const items: { to: string; label: string }[] = [
@@ -22,19 +22,19 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-surface-base/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-surface-base/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 sm:pr-5">
         <NavLink
           to="/"
-          className="reveal flex items-center gap-2.5 text-lg font-bold tracking-tight text-white"
+          className="reveal flex items-center gap-2.5 text-lg font-bold tracking-tight text-slate-900"
         >
           <span
-            className="flex h-9 w-9 items-center justify-center rounded-xl border border-brand-400/30 bg-brand-500/15 text-sm font-black text-brand-300"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-brand-500/30 bg-brand-500/10 text-sm font-black text-brand-700"
             aria-hidden
           >
-            AB
+            PD
           </span>
-          AccessBridge
+          Project Delos
         </NavLink>
 
         <nav className="reveal delay-1 hidden items-center gap-1 md:flex" aria-label="Main">
@@ -53,7 +53,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/5 p-2 text-slate-300 md:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-black/10 bg-white p-2 text-slate-600 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -76,7 +76,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-white/10 bg-surface-layer px-4 py-4 md:hidden">
+        <div id="mobile-nav" className="border-t border-black/5 bg-white px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile main">
             {items.map((item) => (
               <NavLink
